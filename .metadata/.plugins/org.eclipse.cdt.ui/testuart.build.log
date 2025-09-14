@@ -1,0 +1,10 @@
+18:28:33 **** Incremental Build of configuration Debug for project testuart ****
+make -j4 all 
+arm-none-eabi-size  testuart.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8820	     12	   2644	  11476	   2cd4	testuart.elf
+Finished building: default.size.stdout
+ 
+
+18:28:34 Build Finished. 0 errors, 0 warnings. (took 519ms)
+

@@ -1,0 +1,23 @@
+10:03:22 **** Incremental Build of configuration Debug for project BlinkLed ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BlinkLed.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\IoT\STM32\NOLIB\BlinkLed\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BlinkLed.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BlinkLed.elf
+ 
+arm-none-eabi-size  BlinkLed.elf 
+arm-none-eabi-objdump -h -S BlinkLed.elf  > "BlinkLed.list"
+arm-none-eabi-objcopy  -O ihex BlinkLed.elf  "BlinkLed.hex"
+arm-none-eabi-objcopy  -O binary BlinkLed.elf  "BlinkLed.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5028	     12	   1572	   6612	   19d4	BlinkLed.elf
+Finished building: default.size.stdout
+ 
+Finished building: BlinkLed.bin
+Finished building: BlinkLed.hex
+ 
+ 
+Finished building: BlinkLed.list
+ 
+
+10:03:24 Build Finished. 0 errors, 0 warnings. (took 2s.296ms)
+

@@ -1,0 +1,20 @@
+13:07:52 **** Incremental Build of configuration Debug for project EX2_LAB_1_VDK ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "EX2_LAB_1_VDK.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\IoT\STM32\NOLIB\EX2_LAB_1_VDK\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX2_LAB_1_VDK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX2_LAB_1_VDK.elf
+ 
+arm-none-eabi-size  EX2_LAB_1_VDK.elf 
+arm-none-eabi-objdump -h -S EX2_LAB_1_VDK.elf  > "EX2_LAB_1_VDK.list"
+arm-none-eabi-objcopy  -O ihex EX2_LAB_1_VDK.elf  "EX2_LAB_1_VDK.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4616	     12	   1572	   6200	   1838	EX2_LAB_1_VDK.elf
+Finished building: default.size.stdout
+ 
+Finished building: EX2_LAB_1_VDK.hex
+ 
+Finished building: EX2_LAB_1_VDK.list
+ 
+
+13:07:55 Build Finished. 0 errors, 0 warnings. (took 3s.839ms)
+
